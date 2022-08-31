@@ -1,0 +1,28 @@
+{
+  "name": "qabatch404",
+  "version": "1.0.0",
+  "description": "API Automation Test",
+  "main": "index.js",
+  "author": "Mozilag",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "chai": "^4.3.6",
+    "dotenv": "^16.0.2",
+    "link-module-alias": "^1.2.0",
+    "mocha": "^10.0.0",
+    "mochawesome": "^7.1.3"
+  },
+
+  "scripts": {
+    "postinstall": "link-module-alias",
+    "preinstall": "link-module-alias && link-module-alias clean || true"
+  },
+
+  "_moduleAliases": {
+    "$root"      : "tests",
+    "$Helper"    : "tests/helper"
+  }
+
+}
