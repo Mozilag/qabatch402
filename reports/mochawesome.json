@@ -1,0 +1,223 @@
+{
+  "stats": {
+    "suites": 4,
+    "tests": 4,
+    "passes": 3,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-09-01T03:33:50.124Z",
+    "end": "2022-09-01T03:33:54.057Z",
+    "duration": 3933,
+    "testsRegistered": 4,
+    "passPercent": 75,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "0f9d9ff3-f98c-4f10-bb49-ee9e3855de87",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b4a873aa-bc35-4afa-ba1a-23d81e6b58e2",
+          "title": "As a User, i be able to Login",
+          "fullFile": "C:\\Project\\Automate\\qabatch404\\tests\\scenarios\\auth.test.js",
+          "file": "\\tests\\scenarios\\auth.test.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Should successfully login using valid data",
+              "fullTitle": "As a User, i be able to Login Should successfully login using valid data",
+              "timedOut": false,
+              "duration": 1098,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const response = await RestfulAPI.login(data.VALID_USER);\nassert.equal(response.status, 200);\nassert.containsAllKeys(response.data, [\"token\"]);\nassert.isString(response.data.token);",
+              "err": {},
+              "uuid": "f6f9f9ec-8640-49a9-9b7e-ca3f01c88a75",
+              "parentUUID": "b4a873aa-bc35-4afa-ba1a-23d81e6b58e2",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f6f9f9ec-8640-49a9-9b7e-ca3f01c88a75"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1098,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "28fb1617-f21c-4fe1-b4ef-48ffba44d536",
+          "title": "As a User, i be able to Get Booking List IDs",
+          "fullFile": "C:\\Project\\Automate\\qabatch404\\tests\\scenarios\\booking.test.js",
+          "file": "\\tests\\scenarios\\booking.test.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Should Successfully Get Booking List",
+              "fullTitle": "As a User, i be able to Get Booking List IDs Should Successfully Get Booking List",
+              "timedOut": false,
+              "duration": 1342,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const response = await RestfulAPI.getBookingList();\n\nassert.equal(response.status, 200);",
+              "err": {},
+              "uuid": "779ebbb6-ca55-4250-a1b2-0a12ac61d2b8",
+              "parentUUID": "28fb1617-f21c-4fe1-b4ef-48ffba44d536",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "779ebbb6-ca55-4250-a1b2-0a12ac61d2b8"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1342,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "e492b43c-4959-47ef-9a5d-bc750f9b5d53",
+          "title": "As a User, i be able to Create Booking",
+          "fullFile": "C:\\Project\\Automate\\qabatch404\\tests\\scenarios\\booking.test.js",
+          "file": "\\tests\\scenarios\\booking.test.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Should Successfully Create Booking",
+              "fullTitle": "As a User, i be able to Create Booking Should Successfully Create Booking",
+              "timedOut": false,
+              "duration": 739,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const response = await RestfulAPI.createBooking();\n\nassert.equal(response.status, 200);\nassert.containsAllKeys(response.data, [\"firstname\", \"lastname\", \"totalprice\", \"depositpaid\", \"bookingdates\", \"additionalneeds\"]);\nassert.isString(response.data.firstname);\nassert.isString(response.data.lastname);\nassert.isNumber(response.data.totalprice);\nassert.isBoolean(response.data.depositpaid);\nassert.isArray(response.data.bookingdates);\nassert.isString(response.data.additionalneeds);",
+              "err": {
+                "message": "AssertionError: expected 500 to equal 200",
+                "estack": "AssertionError: expected 500 to equal 200\n    at Context.<anonymous> (file:///C:/Project/Automate/qabatch404/tests/scenarios/booking.test.js:16:16)\n    at processTicksAndRejections (internal/process/task_queues.js:95:5)",
+                "diff": "- 500\n+ 200\n"
+              },
+              "uuid": "6bc50534-8227-4cb2-be11-53e6932ec505",
+              "parentUUID": "e492b43c-4959-47ef-9a5d-bc750f9b5d53",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "6bc50534-8227-4cb2-be11-53e6932ec505"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 739,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "8b9117ea-0ca5-4a43-b0d7-b910ac022297",
+          "title": "As a User, i be able to Ping",
+          "fullFile": "C:\\Project\\Automate\\qabatch404\\tests\\scenarios\\ping.test.js",
+          "file": "\\tests\\scenarios\\ping.test.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Should Successfully Ping the API",
+              "fullTitle": "As a User, i be able to Ping Should Successfully Ping the API",
+              "timedOut": false,
+              "duration": 735,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const response = await RestfulAPI.pingAPI();\nassert.equal(response.status, 201);",
+              "err": {},
+              "uuid": "881dc1b7-80f5-4b48-b5ca-c2c557fc0b71",
+              "parentUUID": "8b9117ea-0ca5-4a43-b0d7-b910ac022297",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "881dc1b7-80f5-4b48-b5ca-c2c557fc0b71"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 735,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "10.0.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "reports"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
