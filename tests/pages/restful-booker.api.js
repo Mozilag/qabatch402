@@ -6,7 +6,8 @@ const RestfulAPI = {
     getBookingList:(data) =>BaseAPI.get('/booking', data),
 
     //POST
-    login:(data) =>BaseAPI.post('/auth', data)
+    login:(data) =>BaseAPI.post('/auth', data),
+    createBooking:(data) =>BaseAPI.post('/booking', data)
 }
 
 export default RestfulAPI;
